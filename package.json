@@ -1,0 +1,31 @@
+{
+  "name": "imageboardcrud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Justin-Ja/ImageBoardCRUD.git"
+  },
+  "keywords": [
+    "Image",
+    "ImageBoard",
+    "CRUD",
+    "Webpage"
+  ],
+  "author": "Justin Ja.",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Justin-Ja/ImageBoardCRUD/issues"
+  },
+  "homepage": "https://github.com/Justin-Ja/ImageBoardCRUD#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "uuid": "^8.3.2"
+  }
+}
