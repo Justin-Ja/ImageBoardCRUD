@@ -1,6 +1,56 @@
 body{
-    background-color: rgb(126, 126, 126);
+    background-color: rgb(200, 200, 200);
 }
 h1{
     color: rgb(25, 26, 25);
+}
+
+nav{
+    background-color: rgb(40, 40, 40);
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.75em;
+    margin: -0.5em;
+}
+
+.nav-list{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-list, .nav-list-item{
+    display: inline-flex;
+    margin: 0;
+    padding-left: 1em;
+
+}
+
+.nav-list :last-child .nav-link {
+    padding-left: 1em;
+    color: yellow;
+}
+
+/* remove this later just for visual clearness of links */
+.nav-link{
+    color: yellow;
+}
+
+footer{
+    display: block;
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    margin: -0.5em;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(40, 40, 40);
+    
+}
+
+/* maybe remove this later as well, once color text issue is fixed */
+.footer-span{
+    color: whitesmoke;
 }

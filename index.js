@@ -2,7 +2,12 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
+const {v4: uuid} = require('uuid');
 const port = 8080
+
+let fakeDataBase = [
+
+];
 
 //For overriding post methods to use PATCH/DELETE
 app.use(methodOverride('_method'));
