@@ -24,6 +24,10 @@ app.get('/', (req, res) =>{
     res.render('home');
 })
 
+app.get('/images', (req, res) =>{
+    res.render('images/index');
+})
+
 app.listen(port, () =>{
     console.log("Listening on port %d...", port);
 })
