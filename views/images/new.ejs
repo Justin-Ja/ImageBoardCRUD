@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/navbar') %>
+
+    <h1>Create a new post</h1>
+
+        <form action="/images" method="post">
+            <section>
+                <label for="username">Enter username: </label>
+                <input type="text" id="username" placeholder="username" name="username">
+            </section>
+
+            <section>
+                <label for="comment">Write your comment here:</label> <br>
+                <textarea id="comment" cols="30" rows="5" name="description"></textarea>
+            </section>
+
+            <section>
+                <label for="username">Enter url for image: </label>
+                <input type="url" id="img" placeholder="Image url" name="img">
+            </section>
+    
+            <button>Submit</button>
+        </form>
+
+        <h2>How do I get an image's URL?</h2>
+        <p>Simply by right clicking an image from online and selecting 'Copy image address'. Alternatively, you can open the <b>image <i>(not link)</i> </b> in a new tab and grab the URL from the search bar</p>
+    <%- include('../partials/footer') %>
+
+</body>
+</html>
