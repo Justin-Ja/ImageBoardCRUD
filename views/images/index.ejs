@@ -11,8 +11,8 @@
     <div>
         <% for(let post of fakeDataBase) { %>
             <div>
-                <!-- have it so clicking on the image will bring them to a more detailed page with just the one post-->
-                <p><b><%= post.username %></b> - <%= post.description %></p>
+                 <p><b><%= post.username %></b> - <%= post.description %></p> 
+                 <a href="/images/<%= post.id %>"> <button>Inspect Post</button> </a> <br> <!-- <---get rid of the br later -->
                 <img src="<%= post.img %>" alt="<%= post.description %>">
             </div>
         <% } %> 

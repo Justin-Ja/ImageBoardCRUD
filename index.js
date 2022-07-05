@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 //To serve the css file to the ejs files
 app.use(express.static(path.join(__dirname, "public")));
 
-let fakeDataBase = [
+const fakeDataBase = [
     {
         id: uuid(),
         username: 'YaBoiYustin',
@@ -44,6 +44,7 @@ let fakeDataBase = [
         id: uuid(),
         username: 'Test',
         description: 'This image here is a test.',
+        //CHANGE THIS LATER TO A FREE TO USE IMAGE 
         img: 'https://assets.roguefitness.com/f_auto,q_auto,c_limit,w_1600,b_rgb:ffffff/catalog/Bodyweight%20and%20Gymnastics/Ropes/Conditioning%20Ropes/KRP50/KRP50-web4_go92u4.png'
     }
 ];
@@ -71,17 +72,34 @@ app.get('/images/new', (req, res) => {
 
 app.post('/images', (req, res) => {
     const {username, description, img} = req.body;
+
+    //If any field has no info (0 length) dont update the 'dataBase'
     if(username.length != 0 && description.length != 0 && img.length != 0){
         fakeDataBase.unshift({username, description, img, id: uuid() });
-        res.redirect('/images');
+        res.redirect('images');
     }
     else{
         //Make a new page explaining error, will be different, instead of 404, use 422
-        res.redirect('/images/new');
+        res.redirect('images/new');
     }
 })
 
+//**************************
+// INSPECTING A POST
+//**************************
+app.get('/images/:id', (req, res) => {
+    const { id } = req.params
+    const post = fakeDataBase.find(function(p){ 
+        return p.id === id;
+    });
+    res.render('images/inspect', { post });
+})
 
+//**************************
+// EDITING/UPDATING A POST
+//**************************
+
+//const post = fakeDataBase.find(p => p.id === id
 
 app.listen(port, () =>{
     console.log("Listening on port %d...", port);
