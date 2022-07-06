@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 //To serve the css file to the ejs files
 app.use(express.static(path.join(__dirname, "public")));
 
-const fakeDataBase = [
+let fakeDataBase = [
     {
         id: uuid(),
         username: 'YaBoiYustin',
@@ -98,7 +98,30 @@ app.get('/images/:id', (req, res) => {
 //**************************
 // EDITING/UPDATING A POST
 //**************************
+app.get('/images/:id/edit', (req, res) => {
+    const { id } = req.params;
+    //finds comment with matching id, renders with that information
+    const post = fakeDataBase.find(p => p.id === id);
+    res.render('images/edit', { post });
+})
 
+app.patch('/images/:id', (req, res) => {
+    const { id } = req.params;
+    const newCommentText = req.body.description;
+    const foundComment = fakeDataBase.find(c => c.id === id);
+    foundComment.description = newCommentText;
+    res.redirect('/images');
+    
+})
+
+//**************************
+// DELETING A POST
+//*************************
+app.delete('/images/:id', (req, res) => {
+    const { id } = req.params;
+    fakeDataBase = fakeDataBase.filter(p => p.id !== id); //callback func, var c, if id is not equal you keep the post
+    res.redirect('/images');
+})
 //const post = fakeDataBase.find(p => p.id === id
 
 app.listen(port, () =>{

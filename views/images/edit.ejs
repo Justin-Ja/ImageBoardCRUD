@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/navbar') %>
+    <h1>Editing post</h1>
+    <div>
+        <p>Currently editing <%=post.username%>'s post</p>
+        <p>Leave a section blank if you do <i>not</i> want to update that section</p>
+    </div>
+    <!-- remove these br later -->
+    <br><br><br>
+    
+    <form method="POST" action="/images/<%=post.id%>?_method=PATCH">
+        <section>
+            <textarea name="comment" id="" cols="30" rows="5"><%= post.description  %></textarea>
+        </section>
+        <section>
+            <input type="url" name="url" id="" >
+            <button>Save</button>
+        </section>
+    </form>
+    
+    <a href="/images"><button>Cancel edit</button></a>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

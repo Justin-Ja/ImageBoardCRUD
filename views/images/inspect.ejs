@@ -10,12 +10,16 @@
     <!-- Eventually change this to be more side by side, more like the page is fit for one image not multiple. Use ID selectors or other classes to differ these html tags from the other web pages -->
     <!-- JUST USE DIVS / SPANS TO PUT THE CONTAINERS IN THE SPOTS YOU WANT -->
     <h1>Details</h1>
-    <p>Post Id:  <%= post.id %></p>
+    <p>Post Id:  <%=post.id%></p>
     <p><b> <%= post.username %> </b> - <%= post.description %></p>
 
     <!-- remove these after actually doing some proper CSS-->
     
-    <button>Edit Post</button> <button>Delete Post</button>
+    <a href="/images/<%=post.id%>/edit"><button>Edit Post</button></a> 
+    
+    <form method="POST" action="/images/<%=post.id%>/?_method=DELETE">
+        <button>Delete this post</button>
+    </form>
     <br> <br>
 
     <img src="<%= post.img %>" alt="<%= post.description %>">
