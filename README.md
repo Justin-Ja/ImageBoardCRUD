@@ -7,6 +7,7 @@ Inital creation date: July 4th, 2022
 Last updated: July 6th, 2022
 
 Downloading the application:
+
 	Have Node JS installed
 	Download all the files into a single folder
 	Open a shell window in the folder (or navigate to the folder)
