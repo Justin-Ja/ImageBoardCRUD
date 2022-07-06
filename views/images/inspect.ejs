@@ -13,10 +13,9 @@
     <p>Post Id:  <%=post.id%></p>
     <p><b> <%= post.username %> </b> - <%= post.description %></p>
 
-    <!-- remove these after actually doing some proper CSS-->
-    
     <a href="/images/<%=post.id%>/edit"><button>Edit Post</button></a> 
-    
+
+    <!-- Form/button to remove a post-->
     <form method="POST" action="/images/<%=post.id%>/?_method=DELETE">
         <button>Delete this post</button>
     </form>

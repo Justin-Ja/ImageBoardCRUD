@@ -71,17 +71,10 @@ app.get('/images/new', (req, res) => {
 })
 
 app.post('/images', (req, res) => {
+    //Form requires all fields to be filled out, no need to check for undefs
     const {username, description, img} = req.body;
-
-    //If any field has no info (0 length) dont update the 'dataBase'
-    if(username.length != 0 && description.length != 0 && img.length != 0){
-        fakeDataBase.unshift({username, description, img, id: uuid() });
-        res.redirect('images');
-    }
-    else{
-        //Make a new page explaining error, will be different, instead of 404, use 422
-        res.redirect('images/new');
-    }
+    fakeDataBase.unshift({username, description, img, id: uuid() });
+    res.redirect('images');
 })
 
 //**************************
@@ -107,9 +100,13 @@ app.get('/images/:id/edit', (req, res) => {
 
 app.patch('/images/:id', (req, res) => {
     const { id } = req.params;
-    const newCommentText = req.body.description;
-    const foundComment = fakeDataBase.find(c => c.id === id);
-    foundComment.description = newCommentText;
+    const foundPost = fakeDataBase.find(c => c.id === id);
+
+    //If a section of the form is empty, then dont change it
+    if(req.body.description != undefined){
+    const newDesc = req.body.description;
+    foundPost.description = newDesc;
+    }
     res.redirect('/images');
     
 })

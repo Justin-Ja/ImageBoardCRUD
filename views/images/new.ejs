@@ -11,17 +11,17 @@
     <form action="/images" method="post">
         <section>
             <label for="username">Enter username: </label>
-            <input type="text" id="username" placeholder="username" name="username">
+            <input type="text" id="username" placeholder="username" name="username" required>
         </section>
 
         <section>
             <label for="comment">Write your comment here:</label> <br>                
-            <textarea id="comment" cols="30" rows="5" name="description"></textarea>
+            <textarea id="comment" cols="30" rows="5" name="description" required></textarea>
         </section>
 
         <section>
-            <label for="username">Enter url for image: </label>
-            <input type="url" id="img" placeholder="Image url" name="img">
+            <label for="url">Enter url for image: </label>
+            <input type="url" id="img" placeholder="Image url" name="img" required>
         </section>
     
         <button>Submit</button>

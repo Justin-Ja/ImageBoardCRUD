@@ -7,20 +7,22 @@
     <%- include('../partials/navbar') %>
     <h1>Editing post</h1>
     <div>
-        <p>Currently editing <%=post.username%>'s post</p>
-        <p>Leave a section blank if you do <i>not</i> want to update that section</p>
+        <p>Currently editing <b><%=post.username%>'s</b> post</p>
     </div>
+
     <!-- remove these br later -->
     <br><br><br>
-    
+
     <form method="POST" action="/images/<%=post.id%>?_method=PATCH">
         <section>
-            <textarea name="comment" id="" cols="30" rows="5"><%= post.description  %></textarea>
+            <label for="textAreaDescription">Description of the post: </label> 
+            <textarea name="description" id="" cols="30" rows="5"><%= post.description  %></textarea>
         </section>
         <section>
+            <label for="ImageURL">URL for the image: </label>
             <input type="url" name="url" id="" >
-            <button>Save</button>
         </section>
+        <button>Save</button>
     </form>
     
     <a href="/images"><button>Cancel edit</button></a>
