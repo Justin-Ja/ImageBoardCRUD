@@ -98,16 +98,14 @@ app.get('/images/:id/edit', (req, res) => {
     res.render('images/edit', { post });
 })
 
+//Patch request from edit.ejs form. It's required, so no need to check for empty fields
 app.patch('/images/:id', (req, res) => {
     const { id } = req.params;
-    const foundPost = fakeDataBase.find(c => c.id === id);
-
-    const newDesc = req.body.description;
-    foundPost.description = newDesc;
-    const newImg = req.body.img;
-    foundPost.img = newImg;
+    const foundPost = fakeDataBase.find(p => p.id === id);
+    //The found post is updated with the info from the edit.ejs form's info
+    foundPost.description = req.body.description;
+    foundPost.img = req.body.img;
     res.redirect('/images');
-    
 })
 
 //**************************
@@ -115,10 +113,10 @@ app.patch('/images/:id', (req, res) => {
 //*************************
 app.delete('/images/:id', (req, res) => {
     const { id } = req.params;
-    fakeDataBase = fakeDataBase.filter(p => p.id !== id); //callback func, var c, if id is not equal you keep the post
+    //callback func, var c, if the id's are not equal you keep the post
+    fakeDataBase = fakeDataBase.filter(p => p.id !== id); 
     res.redirect('/images');
 })
-//const post = fakeDataBase.find(p => p.id === id
 
 app.listen(port, () =>{
     console.log("Listening on port %d...", port);

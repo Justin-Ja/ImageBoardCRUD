@@ -1,3 +1,4 @@
+/* Root html objects */
 body{
     background-color: rgb(200, 200, 200);
 }
@@ -5,6 +6,7 @@ h1{
     color: rgb(25, 26, 25);
 }
 
+/* Navbar styles --------------------------- */
 nav{
     background-color: rgb(40, 40, 40);
     font-size: 1em;
@@ -38,6 +40,7 @@ nav{
     color: yellow;
 }
 
+/* Footer styles ---------------------------*/
 footer{
     display: block;
     position: fixed;
@@ -53,4 +56,8 @@ footer{
 /* maybe remove this later as well, once color text issue is fixed */
 .footer-span{
     color: whitesmoke;
+}
+
+#footerLink{
+    color: rgb(0, 139, 252)
 }
