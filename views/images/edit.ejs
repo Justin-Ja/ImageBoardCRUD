@@ -16,11 +16,12 @@
     <form method="POST" action="/images/<%=post.id%>?_method=PATCH">
         <section>
             <label for="textAreaDescription">Description of the post: </label> 
-            <textarea name="description" id="" cols="30" rows="5"><%= post.description  %></textarea>
+            <textarea name="description" id="" cols="30" rows="5" required><%= post.description  %></textarea>
         </section>
         <section>
             <label for="ImageURL">URL for the image: </label>
-            <input type="url" name="url" id="" >
+            <input type="url" name="img" id="" required>
+            <p>The current URL being hosted is: <%=post.img%></p>
         </section>
         <button>Save</button>
     </form>

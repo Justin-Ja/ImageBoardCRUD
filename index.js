@@ -102,11 +102,10 @@ app.patch('/images/:id', (req, res) => {
     const { id } = req.params;
     const foundPost = fakeDataBase.find(c => c.id === id);
 
-    //If a section of the form is empty, then dont change it
-    if(req.body.description != undefined){
     const newDesc = req.body.description;
     foundPost.description = newDesc;
-    }
+    const newImg = req.body.img;
+    foundPost.img = newImg;
     res.redirect('/images');
     
 })
