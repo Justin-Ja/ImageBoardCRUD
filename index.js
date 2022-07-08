@@ -118,6 +118,13 @@ app.delete('/images/:id', (req, res) => {
     res.redirect('/images');
 })
 
+
+//**************************
+// ERROR 404
+//*************************
+app.get('*', (req, res) => {
+    res.render('404');
+})
 app.listen(port, () =>{
     console.log("Listening on port %d...", port);
 })

@@ -1,5 +1,5 @@
 
-/* COLORS ARE TEMP, WILL BE UPDATED AT A LATER DATE */
+/* COLORS ARE TEMP, WILL BE UPDATED AT A LATER DATE (INCLUDING ANY WEIRD BG COLORS*/
 
 /* Root html objects */
 body{
@@ -110,6 +110,29 @@ footer{
     background-color: rgb(44, 46, 212);
 }
 
+/* 404 page styles -----------------------------------*/
+#div-404-outer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    min-height: 50vh;
+}
+
+/* IF this stays the same, move this class into the h1-home selector above  */
+.div-404{
+    align-self: center;
+    background-color: aqua;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.header-404{
+    width: 100%;
+    padding: 1em 2em;
+    margin: 0.5em;
+}
+
 /* Index page styles -----------------------------------*/
 .button-inspect{
     background-color: royalblue;
@@ -128,4 +151,7 @@ footer{
 
 /* New post page styles --------------------------------*/
 
+/* Edit page styles -----------------------------*/
+
 /* Edit page styles styles -----------------------------*/
+
