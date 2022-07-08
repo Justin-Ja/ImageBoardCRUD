@@ -3,11 +3,25 @@
 
 <%- include('partials/head') %>
 
-<body>
+<body id="body-home">
    <%- include('partials/navbar') %>
 
-    <h1>Test!!!!!!!!!!!</h1>
-    
+    <!-- images on both sides, to make 3 columns for a nice home page -->
+    <div class="div-home" id="div-home-outer">
+        <div class="div-home">
+            <img src="" alt="">
+        </div>
+
+        <h1 id="h1-home">Welcome to the Image Board!</h1>
+
+        <div class="div-home">
+            <a href="/images" class="link">Start Exploring!</a> <a href="/images/new" class="link">Add an Image!</a>
+        </div>
+
+        <div class="div-home">
+            <img src="" alt="">
+        </div>
+    </div>
     <%- include('partials/footer') %>
 
 </body>

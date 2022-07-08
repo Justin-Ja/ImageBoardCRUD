@@ -8,10 +8,7 @@
     <h1>Editing post</h1>
     <div>
         <p>Currently editing <b><%=post.username%>'s</b> post</p>
-    </div>
-
-    <!-- remove these br later -->
-    <br><br><br>
+    </div>    
 
     <form method="POST" action="/images/<%=post.id%>?_method=PATCH">
         <section>
@@ -23,10 +20,10 @@
             <input type="url" name="img" id="" required>
             <p>The current URL being hosted is: <%=post.img%></p>
         </section>
-        <button>Save</button>
+        <button class="button-submit">Save</button>
     </form>
     
-    <a href="/images"><button>Cancel edit</button></a>
+    <a href="/images"><button class="button-delete">Cancel edit</button></a>
 
     <%- include('../partials/footer') %>
 </body>

@@ -8,13 +8,19 @@
 
     <h1>Explore some posts created by users!</h1>
 
-    <div>
+    <div class="div-outer">
         <% for(let post of fakeDataBase) { %>
-            <div>
-                 <p><b><%= post.username %></b> - <%= post.description %></p> 
-                 <a href="/images/<%= post.id %>"> <button>Inspect Post</button> </a> <br> <!-- <---get rid of the br later -->
+
+            <span class="span-desc">
+                <p><b><%= post.username %></b> - <%= post.description %></p> 
+            </span>
+            <div class="div-button">
+                <a href="/images/<%= post.id %>"> <button class="button-inspect">Inspect Post</button> </a> 
+            </div><br> <!-- <---get rid of the br later -->
+            <div clas="div-img">
                 <img src="<%= post.img %>" alt="<%= post.description %>">
             </div>
+            
         <% } %> 
     </div>
     

@@ -1,12 +1,21 @@
+
+/* COLORS ARE TEMP, WILL BE UPDATED AT A LATER DATE */
+
 /* Root html objects */
 body{
     background-color: rgb(200, 200, 200);
 }
+
 h1{
     color: rgb(25, 26, 25);
 }
 
-/* Navbar styles --------------------------- */
+/* Will be changed later, testing ideas for now */
+form{
+    background-color: greenyellow;
+}
+
+/* Navbar styles ----------------------------------- */
 nav{
     background-color: rgb(40, 40, 40);
     font-size: 1em;
@@ -30,17 +39,26 @@ nav{
 
 }
 
-.nav-list :last-child .nav-link {
-    padding-left: 1em;
-    color: yellow;
-}
-
-/* remove this later just for visual clearness of links */
 .nav-link{
-    color: yellow;
+    border: 1px solid rgb(215, 235, 255);    
+    border-radius: 10px;
+    background-color: rgb(3, 6, 211);
+    color: rgb(215, 235, 255);
+    text-decoration: none; 
+    display: inline-block;
+    padding: 0.5em 1em; 
+    transition: background-color 150ms ease-in;
 }
 
-/* Footer styles ---------------------------*/
+.nav-link:hover{
+    background-color: rgb(44, 46, 212);
+}
+.nav-list :last-child .nav-link {
+    margin-left: 1em;
+}
+
+
+/* Footer styles ---------------------------------------*/
 footer{
     display: block;
     position: fixed;
@@ -53,11 +71,61 @@ footer{
     
 }
 
-/* maybe remove this later as well, once color text issue is fixed */
-.footer-span{
-    color: whitesmoke;
+.span-footer{
+    color:  rgb(215, 235, 255);
 }
 
 #footerLink{
-    color: rgb(0, 139, 252)
+    color: rgb(0, 139, 252);
+    text-decoration: underline;
 }
+
+/* Home page styles ------------------------------------*/
+
+#div-home-outer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 1em 2em;
+}
+
+#h1-home, .div-home{
+    align-self: center;
+}
+
+.link{
+    border: 2px solid rgb(0, 0, 0);    
+    border-radius: 10px;
+    background-color: rgb(3, 6, 211);
+    color: rgb(215, 235, 255);
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.25em 0.5em;
+    text-decoration: none; 
+    transition: background-color 150ms ease-in;
+}
+
+.link:hover{
+    background-color: rgb(44, 46, 212);
+}
+
+/* Index page styles -----------------------------------*/
+.button-inspect{
+    background-color: royalblue;
+    border: 2px solid rgb(0, 255, 42);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    text-decoration: none;
+    transition: background-color 150ms ease-in;
+}
+
+.button-inspect:hover{
+    background-color: aqua;
+}
+
+/* New post page styles --------------------------------*/
+
+/* Edit page styles styles -----------------------------*/
