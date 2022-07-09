@@ -7,21 +7,25 @@
    <%- include('partials/navbar') %>
 
     <!-- images on both sides, to make 3 columns for a nice home page -->
-    <div class="div-home" id="div-home-outer">
-        <div class="div-home">
-            <img src="" alt="">
-        </div>
-
-        <h1 id="h1-home">Welcome to the Image Board!</h1>
+    <div id="div-home-outer">
 
         <div class="div-home">
-            <a href="/images" class="link">Start Exploring!</a> <a href="/images/new" class="link">Add an Image!</a>
+            <img class="img-home" src="https://images.unsplash.com/photo-1657380581281-b6b1be1c620e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="Fancy organ in a Polish church">
+        </div>
+
+        <div id="div-home-inner">
+            <h1 id="h1-home">Welcome to the Image Board!</h1>
+            <div id="div-home-link">
+                <a href="/images" class="link">Start Exploring!</a> <a href="/images/new" class="link">Add an Image!</a>
+            </div>
         </div>
 
         <div class="div-home">
-            <img src="" alt="">
+            <img class="img-home" src="https://images.unsplash.com/photo-1657318556399-edb27836fa19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="An alleyway between two tall aparments made of stone">
         </div>
+
     </div>
+
     <%- include('partials/footer') %>
 
 </body>

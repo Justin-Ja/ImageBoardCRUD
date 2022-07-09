@@ -15,7 +15,11 @@
     "Image",
     "ImageBoard",
     "CRUD",
-    "Webpage"
+    "Webpage",
+    "Website",
+    "NodeJS",
+    "EJS",
+    "express"
   ],
   "author": "Justin Ja.",
   "license": "UNLICENSED",

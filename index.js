@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "public")));
 let fakeDataBase = [
     {
         id: uuid(),
-        username: 'YaBoiYustin',
+        username: 'Yustin',
         description: 'Look at this image! Wow!',
         img: 'https://images.unsplash.com/photo-1548195667-1d329af0a472?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80'
     },
@@ -36,16 +36,15 @@ let fakeDataBase = [
     },
     {
         id: uuid(),
-        username: 'SomeGuy',
-        description: 'I am unsure of what this is',
+        username: 'thatOnlineGuy',
+        description: 'A pretty treeline I saw on my vacation to Canada!',
         img: 'https://images.unsplash.com/photo-1548195667-1d329af0a472?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80'
     },
     {
         id: uuid(),
-        username: 'Test',
-        description: 'This image here is a test.',
-        //CHANGE THIS LATER TO A FREE TO USE IMAGE 
-        img: 'https://assets.roguefitness.com/f_auto,q_auto,c_limit,w_1600,b_rgb:ffffff/catalog/Bodyweight%20and%20Gymnastics/Ropes/Conditioning%20Ropes/KRP50/KRP50-web4_go92u4.png'
+        username: 'Cookie-Monster',
+        description: 'Mmmm, look at this jar of cookies',
+        img: 'https://images.unsplash.com/photo-1657312125229-e8e83cf46ff1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'
     }
 ];
 
@@ -73,7 +72,7 @@ app.get('/images/new', (req, res) => {
 app.post('/images', (req, res) => {
     //Form requires all fields to be filled out, no need to check for undefs
     const {username, description, img} = req.body;
-    fakeDataBase.unshift({username, description, img, id: uuid() });
+    fakeDataBase.unshift({ username, description, img, id: uuid() });
     res.redirect('images');
 })
 

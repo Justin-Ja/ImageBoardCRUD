@@ -3,11 +3,12 @@
 
 /* Root html objects */
 body{
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(210, 210, 210);
+    font-family: Roboto, sans-serif;
 }
 
-h1{
-    color: rgb(25, 26, 25);
+h1, h2, h3{
+    text-align: center;
 }
 
 /* Will be changed later, testing ideas for now */
@@ -17,7 +18,7 @@ form{
 
 /* Navbar styles ----------------------------------- */
 nav{
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(6, 40, 61);
     font-size: 1em;
     display: flex;
     flex-direction: row;
@@ -40,10 +41,10 @@ nav{
 }
 
 .nav-link{
-    border: 1px solid rgb(215, 235, 255);    
+    border: 1px solid rgb(71, 181, 255);    
     border-radius: 10px;
-    background-color: rgb(3, 6, 211);
-    color: rgb(215, 235, 255);
+    background-color: rgb(19, 99, 223);
+    color: black;
     text-decoration: none; 
     display: inline-block;
     padding: 0.5em 1em; 
@@ -51,7 +52,7 @@ nav{
 }
 
 .nav-link:hover{
-    background-color: rgb(44, 46, 212);
+    background-color: rgb(71, 181, 255);
 }
 .nav-list :last-child .nav-link {
     margin-left: 1em;
@@ -65,10 +66,9 @@ footer{
     padding: 10px 10px 0px 10px;
     margin: -0.5em;
     bottom: 0;
-    width: 100%;
+    width: 99.9%;
     height: 40px;
-    background-color: rgb(40, 40, 40);
-    
+    background-color: rgb(6, 40, 61);
 }
 
 .span-footer{
@@ -76,30 +76,50 @@ footer{
 }
 
 #footerLink{
-    color: rgb(0, 139, 252);
-    text-decoration: underline;
+    color: rgb(71, 181, 255);
 }
 
 /* Home page styles ------------------------------------*/
-
+/* Ok for now, could use some work with img divs to make it look better */
 #div-home-outer{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: center;
-    flex-direction: column;
+    flex-direction: row;
     padding: 1em 2em;
+    
 }
 
-#h1-home, .div-home{
-    align-self: center;
+#div-home-inner{
+    margin: 1em 2em;
+    padding: 0.5em 1em;
+}
+
+#div-home-link{
+    display: flex;
+    justify-content: center;
+    padding: 0.25em;
+}
+
+#h1-home{
+    padding: 0.5em;
+    margin: auto;
+}
+
+.img-home{
+    border: 2px solid black;
+    border-radius: 1em;
+    width: 100%;
+    height: 90%;
 }
 
 .link{
-    border: 2px solid rgb(0, 0, 0);    
+    border: 2px solid rgb(19, 99, 223);
     border-radius: 10px;
-    background-color: rgb(3, 6, 211);
-    color: rgb(215, 235, 255);
+    background-color: rgb(6, 40, 61);
+    color: rgb(223, 246, 255);
     display: inline-block;
+    text-align: center;
     padding: 0.5em 1em;
     margin: 0.25em 0.5em;
     text-decoration: none; 
@@ -107,7 +127,7 @@ footer{
 }
 
 .link:hover{
-    background-color: rgb(44, 46, 212);
+    background-color: rgb(19, 99, 223);
 }
 
 /* 404 page styles -----------------------------------*/
@@ -119,25 +139,24 @@ footer{
     min-height: 50vh;
 }
 
-/* IF this stays the same, move this class into the h1-home selector above  */
 .div-404{
     align-self: center;
-    background-color: aqua;
     padding: 0.5em;
     margin: 0.5em;
 }
 
 .header-404{
-    width: 100%;
-    padding: 1em 2em;
+    width: 90%;
+    padding: 0.5em 1em;
     margin: 0.5em;
 }
 
 /* Index page styles -----------------------------------*/
 .button-inspect{
-    background-color: royalblue;
-    border: 2px solid rgb(0, 255, 42);
+    border: 2px solid rgb(19, 99, 223);
     border-radius: 5px;
+    background-color: rgb(6, 40, 61);
+    color: rgb(223, 246, 255);
     display: inline-block;
     padding: 0.5em 1em;
     margin: 0.5em;
@@ -146,7 +165,7 @@ footer{
 }
 
 .button-inspect:hover{
-    background-color: aqua;
+    background-color: rgb(19, 99, 223);
 }
 
 /* New post page styles --------------------------------*/
