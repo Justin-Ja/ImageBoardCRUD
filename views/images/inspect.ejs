@@ -19,16 +19,16 @@
     </span>
 
     <div>
-        <a href="/images/<%=post.id%>/edit"><button class="button-edit">Edit Post</button></a> 
-    </div>
-
-    <div>
-        <a href="/images"><button class="button-delete">Cancel</button></a>
+        <a href="/images/<%=post.id%>/edit"><button class="button-inspect">Edit Post</button></a> 
     </div>
 
     <form method="POST" action="/images/<%=post.id%>/?_method=DELETE">
-        <button class="button-delete">Delete this post</button>
+        <button class="button-cancel">Delete this post</button>
     </form>
+    
+    <div>
+        <a href="/images"><button class="button-cancel">Cancel</button></a>
+    </div>
 
     <br> <br>
 

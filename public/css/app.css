@@ -11,11 +11,6 @@ h1, h2, h3{
     text-align: center;
 }
 
-/* Will be changed later, testing ideas for now */
-form{
-    background-color: greenyellow;
-}
-
 /* Navbar styles ----------------------------------- */
 nav{
     background-color: rgb(6, 40, 61);
@@ -151,7 +146,7 @@ footer{
     margin: 0.5em;
 }
 
-/* Index page styles -----------------------------------*/
+/* Button styles -----------------------------------*/
 .button-inspect{
     border: 2px solid rgb(19, 99, 223);
     border-radius: 5px;
@@ -168,9 +163,59 @@ footer{
     background-color: rgb(19, 99, 223);
 }
 
-/* New post page styles --------------------------------*/
+.button-cancel{
+    border: 2px solid rgb(165, 7, 5);
+    border-radius: 5px;
+    background-color: rgb(99, 6, 6);
+    color: rgb(223, 246, 255);
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    text-decoration: none;
+    transition: background-color 150ms ease-in;
+}
 
+.button-cancel:hover{
+    background-color: rgb(165, 7, 5);
+}
+
+/* Index page styles -----------------------------------*/
+
+/* Inspect page  styles -----------------------------*/
+
+/* New post page styles --------------------------------*/
+/* could use some more work, column looks good on smaller screens not on fullscreen*/
+/* Some @media would fix this, would have to make the form look good in rows though... */
+#form-new{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-new{
+    text-align: center;
+    padding: 0.5em 0.25em;
+    margin: auto;
+}
+
+
+.input-new, .label-new{
+    padding: 0.25em;
+    margin: 0.5em;
+}
+
+#button-new {
+    font-size: 24px;
+}
+
+#div-new-cancel{
+    display: flex;
+    justify-content: center;
+}
+
+#new-post-desc{
+    text-align: center;
+}
 /* Edit page styles -----------------------------*/
 
-/* Edit page styles styles -----------------------------*/
+
 

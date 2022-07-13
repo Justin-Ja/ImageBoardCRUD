@@ -8,32 +8,38 @@
 
     <h1>Create a new post</h1>
 
-    <form id="form-new-post" action="/images" method="post">
-        <section>
-            <label for="username">Enter username: </label>
-            <input type="text" id="username" placeholder="Username" name="username" required>
+    <form id="form-new" action="/images" method="post">
+        <section class="section-new">
+            <label for="username" class="label-new">Enter username:</label> <br>
+            <input type="text" id="input-username" class="input-new" placeholder="Username" name="username" required>
         </section>
 
-        <section>
-            <label for="comment">Write your description here:</label> <br>                
-            <textarea id="comment" cols="30" rows="5" name="description" placeholder="Description of your photo" required></textarea>
+        <section class="section-new">
+            <label for="description" class="label-new">Write your description here:</label> <br>                
+            <textarea id="textarea-description" class="input-new" cols="30" rows="5" name="description" placeholder="Description of your photo" required></textarea>
         </section>
 
-        <section>
-            <label for="url">Enter url for image: </label>
-            <input type="url" id="img" placeholder="Image url" name="img" required>
+        <section class="section-new">
+            <label for="url" class="label-new">Enter url for image: </label>  <br> 
+            <input type="url" id="input-url" class="input-new" placeholder="Image url" name="img" required>
         </section>
         
-        <button class="button-submit">Submit</button>
+        <section class="section-new">
+            <button class="button-inspect" id="button-new">Submit</button>
+        </section>
     </form>
 
-    
-    <div>
-        <a href="/images"><button class="button-delete">Cancel</button></a>
+    <div id="div-new-cancel">
+        <a href="/images"><button class="button-cancel" id="button-new">Cancel</button></a>
+    </div>
+
+    <div id="div-info">
+        <h2>How do I get an image's URL?</h2>
+        <span>
+            <p id="new-post-desc">Simply by right clicking an image from online and selecting 'Copy image address'. Alternatively, you can open the <b>image <i>(not link)</i> </b> in a new tab and grab the URL from the search bar</p>
+        </span>
     </div>
     
-    <h2>How do I get an image's URL?</h2>
-    <p>Simply by right clicking an image from online and selecting 'Copy image address'. Alternatively, you can open the <b>image <i>(not link)</i> </b> in a new tab and grab the URL from the search bar</p>
     <%- include('../partials/footer') %>
 
 </body>
