@@ -6,26 +6,31 @@
 <body>
     <%- include('../partials/navbar') %>
     <h1>Editing post</h1>
-    <div>
+    <div class= "div-edit">
         <p>Currently editing <b><%=post.username%>'s</b> post</p>
     </div>    
 
-    <form method="POST" action="/images/<%=post.id%>?_method=PATCH">
-        <section>
-            <label for="textAreaDescription">Description of the post: </label> 
-            <textarea name="description" id="" cols="30" rows="5" required><%= post.description  %></textarea>
+    <form id="form-full" method="POST" action="/images/<%=post.id%>?_method=PATCH">
+
+        <section class="section-form"> 
+            <label for="textAreaDescription" class="label-form">Description of the post: </label> <br>
+            <textarea name="description" id="" class="input-form" cols="30" rows="5" required><%= post.description  %></textarea>
         </section>
         
-        <section>
-            <label for="ImageURL">URL for the image: </label>
-            <input type="url" name="img" id="" required>
+        <section class="section-form">
+            <label for="ImageURL" class="label-form">URL for the image: </label> <br>
+            <input type="url" name="img" id="" class="input-form" required>
             <p>The current URL being hosted is: <%=post.img%></p>
         </section>
 
-        <button class="button-inspect">Save</button>
+        <section class="section-form">
+            <button class="button-inspect big-text">Save</button>
+        </section>
     </form>
     
-    <a href="/images"><button class="button-cancel">Cancel edit</button></a>
+    <div id="div-form-cancel">
+        <a href="/images"><button class="button-cancel big-text">Cancel Edit</button></a>
+    </div>
 
     <%- include('../partials/footer') %>
 </body>

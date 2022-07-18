@@ -8,29 +8,29 @@
 
     <h1>Create a new post</h1>
 
-    <form id="form-new" action="/images" method="post">
-        <section class="section-new">
-            <label for="username" class="label-new">Enter username:</label> <br>
-            <input type="text" id="input-username" class="input-new" placeholder="Username" name="username" required>
+    <form id="form-full" action="/images" method="post">
+        <section class="section-form">
+            <label for="username" class="label-form">Enter username:</label> <br>
+            <input type="text" id="input-username" class="input-form" placeholder="Username" name="username" required>
         </section>
 
-        <section class="section-new">
-            <label for="description" class="label-new">Write your description here:</label> <br>                
-            <textarea id="textarea-description" class="input-new" cols="30" rows="5" name="description" placeholder="Description of your photo" required></textarea>
+        <section class="section-form">
+            <label for="description" class="label-form">Write your description here:</label> <br>                
+            <textarea id="textarea-description" class="input-form" cols="30" rows="5" name="description" placeholder="Description of your photo" required></textarea>
         </section>
 
-        <section class="section-new">
-            <label for="url" class="label-new">Enter url for image: </label>  <br> 
-            <input type="url" id="input-url" class="input-new" placeholder="Image url" name="img" required>
+        <section class="section-form">
+            <label for="url" class="label-form">Enter url for image: </label>  <br> 
+            <input type="url" id="input-url" class="input-form" placeholder="Image url" name="img" required>
         </section>
         
-        <section class="section-new">
-            <button class="button-inspect" id="button-new">Submit</button>
+        <section class="section-form">
+            <button class="button-inspect big-text">Submit</button>
         </section>
     </form>
 
-    <div id="div-new-cancel">
-        <a href="/images"><button class="button-cancel" id="button-new">Cancel</button></a>
+    <div id="div-form-cancel">
+        <a href="/images"><button class="button-cancel big-text">Cancel</button></a>
     </div>
 
     <div id="div-info">

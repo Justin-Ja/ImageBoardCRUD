@@ -3,37 +3,34 @@
 
 <%- include('../partials/head') %>
 
-<body>
+<body id="body-inspect">
     
     <%- include('../partials/navbar') %>
 
     <!-- Eventually change this to be more side by side, more like the page is fit for one image not multiple.-->
 
     <h1>Details</h1>
-    <span class="span-inspect">
-        <p>Post Id:  <%=post.id%></p>
-    </span>
-    
-    <span class="span-inspect">
-        <p><b> <%= post.username %> </b> - <%= post.description %></p>
-    </span>
 
-    <div>
-        <a href="/images/<%=post.id%>/edit"><button class="button-inspect">Edit Post</button></a> 
-    </div>
+    <div id="div-inspect-outer">
 
-    <form method="POST" action="/images/<%=post.id%>/?_method=DELETE">
-        <button class="button-cancel">Delete this post</button>
-    </form>
-    
-    <div>
-        <a href="/images"><button class="button-cancel">Cancel</button></a>
-    </div>
+        <img class="img-inspect" src="<%= post.img %>" alt="<%= post.description %>">
 
-    <br> <br>
+        <div class="div-inspect">
+            <p>Post Id:  <%=post.id%></p>
+            <p><b> <%= post.username %> </b> - <%= post.description %></p>
 
-    <div>
-        <img src="<%= post.img %>" alt="<%= post.description %>">
+            <div>
+                <a href="/images/<%=post.id%>/edit"><button class="button-inspect big-text">Edit Post</button></a> 
+            </div>
+
+            <form method="POST" action="/images/<%=post.id%>/?_method=DELETE">
+                <button class="button-cancel big-text">Delete this post</button>
+            </form>
+            
+            <div>
+                <a href="/images"><button class="button-cancel big-text">Cancel</button></a>
+            </div>
+        </div>
     </div>
 
     <!-- remove these after fixing the issue with css of footer covering some part of webpage -->
