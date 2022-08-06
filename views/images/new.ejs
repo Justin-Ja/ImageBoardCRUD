@@ -9,26 +9,32 @@
     <h1>Create a new post</h1>
 
     <form id="form-full" action="/images" method="post">
+
+        <!-- Username form section -->
         <section class="section-form">
             <label for="username" class="label-form">Enter username:</label> <br>
             <input type="text" id="input-username" class="input-form" placeholder="Username" name="username" required>
         </section>
 
+        <!-- Description form section -->
         <section class="section-form">
             <label for="description" class="label-form">Write your description here:</label> <br>                
             <textarea id="textarea-description" class="input-form" cols="30" rows="5" name="description" placeholder="Description of your photo" required></textarea>
         </section>
 
+        <!-- Image form section -->
         <section class="section-form">
             <label for="url" class="label-form">Enter url for image: </label>  <br> 
             <input type="url" id="input-url" class="input-form" placeholder="Image url" name="img" required>
         </section>
         
+        <!-- Submit button for form -->
         <section class="section-form">
             <button class="button-inspect big-text">Submit</button>
         </section>
     </form>
 
+    <!-- Cancel button is outside of form, otherwise the user has to fill in all of the form before cancelling -->
     <div id="div-form-cancel">
         <a href="/images"><button class="button-cancel big-text">Cancel</button></a>
     </div>

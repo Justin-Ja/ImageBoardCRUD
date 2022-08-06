@@ -7,14 +7,14 @@
     
     <%- include('../partials/navbar') %>
 
-    <!-- Eventually change this to be more side by side, more like the page is fit for one image not multiple.-->
-
     <h1>Details</h1>
 
     <div id="div-inspect-outer">
 
+        <!-- Image is to the left, everything else to the side of it -->
         <img class="img-inspect" src="<%= post.img %>" alt="<%= post.description %>">
 
+        <!-- Div here to have the elements in a column for neatness -->
         <div class="div-inspect">
             <p><b> <%= post.username %> </b> - <%= post.description %></p>
 
@@ -34,7 +34,6 @@
         </div>
     </div>
 
-    <!-- remove these after fixing the issue with css of footer covering some part of webpage -->
     <br> <br> <br>
 
     <%- include('../partials/footer') %>

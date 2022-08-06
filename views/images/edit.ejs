@@ -4,6 +4,7 @@
 <%- include('../partials/head') %>
 
 <body>
+    
     <%- include('../partials/navbar') %>
     <h1>Editing post</h1>
     <div class= "div-edit">
@@ -12,17 +13,20 @@
 
     <form id="form-full" method="POST" action="/images/<%=post.id%>?_method=PATCH">
 
+        <!-- Form for description editing -->
         <section class="section-form"> 
             <label for="textAreaDescription" class="label-form">Description of the post: </label> <br>
             <textarea name="description" id="" class="input-form" cols="30" rows="5" required><%= post.description  %></textarea>
         </section>
         
+        <!-- Form for changing the image being hosted -->
         <section class="section-form">
             <label for="ImageURL" class="label-form">URL for the image: </label> <br>
             <input type="url" name="img" id="" class="input-form" required>
             <p>The current URL being hosted is: <%=post.img%></p>
         </section>
 
+        <!-- Buttons Save/Cancel -->
         <section class="section-form">
             <button class="button-inspect big-text">Save</button>
         </section>

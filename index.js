@@ -119,7 +119,7 @@ app.delete('/images/:id', (req, res) => {
 
 
 //**************************
-// ERROR 404
+// ERROR 404 PAGE
 //*************************
 app.get('*', (req, res) => {
     res.render('404');

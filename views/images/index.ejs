@@ -8,7 +8,10 @@
 
     <h1>Explore images uploaded by our users!</h1>
 
+    <!-- Outer div to apply CSS properties to everything inside it -->
     <div class="div-outer">
+
+        <!-- For every array element in fakeDataBase, display the username, description image and an inspect button -->
         <% for(let post of fakeDataBase) { %>
             <div class="div-inner">
                 <span class="span-desc">
@@ -25,8 +28,7 @@
             </div>
         <% } %> 
     </div>
-    
-    <!-- remove these after fixing the issue with css of footer covering some part of webpage -->
+
     <br> <br> <br>
     <%- include('../partials/footer') %>
 

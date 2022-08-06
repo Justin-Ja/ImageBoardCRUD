@@ -21,6 +21,5 @@ Running the application:
 To-Do's:
 
     Find a way to have the original image URL appear in the edit.ejs url input
-    Remake the websites with proper containers
-    Code the CSS to make everything look nice
+    Fix index.ejs's image's to be more dynamic and less compressed/streched looking
     Refactor where applicable
