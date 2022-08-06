@@ -16,7 +16,6 @@
         <img class="img-inspect" src="<%= post.img %>" alt="<%= post.description %>">
 
         <div class="div-inspect">
-            <p>Post Id:  <%=post.id%></p>
             <p><b> <%= post.username %> </b> - <%= post.description %></p>
 
             <div>
@@ -30,6 +29,8 @@
             <div>
                 <a href="/images"><button class="button-cancel big-text">Cancel</button></a>
             </div>
+
+            <p>Post Id:  <%=post.id%></p>
         </div>
     </div>
 

@@ -26,7 +26,7 @@ let fakeDataBase = [
         id: uuid(),
         username: 'Yustin',
         description: 'Look at this image! Wow!',
-        img: 'https://images.unsplash.com/photo-1548195667-1d329af0a472?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80'
+        img: 'https://images.unsplash.com/photo-1659734770479-a930448b560c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1175&q=80'
     },
     {
         id: uuid(),
@@ -42,9 +42,9 @@ let fakeDataBase = [
     },
     {
         id: uuid(),
-        username: 'Cookie-Monster',
-        description: 'Mmmm, look at this jar of cookies',
-        img: 'https://images.unsplash.com/photo-1657312125229-e8e83cf46ff1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'
+        username: 'Nature_Explorer',
+        description: 'A lovely waterfall',
+        img: 'https://images.unsplash.com/photo-1659724546564-b10424f9296f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
     }
 ];
 

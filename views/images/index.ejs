@@ -10,18 +10,19 @@
 
     <div class="div-outer">
         <% for(let post of fakeDataBase) { %>
-            <span class="span-desc">
-                <p class="p-index"><b><%= post.username %></b> - <%= post.description %></p> 
-            </span>
+            <div class="div-inner">
+                <span class="span-desc">
+                    <p class="p-index"><b><%= post.username %></b> - <%= post.description %></p> 
+                </span>
 
-            <div class="div-button">
-                <a href="/images/<%= post.id %>"> <button class="button-inspect">Inspect Post</button> </a> 
+                <div class="div-button">
+                    <a href="/images/<%= post.id %>"> <button class="button-inspect">Inspect Post</button> </a> 
+                </div>
+                            
+                <div clas="div-img">
+                    <img class="img-index" src="<%= post.img %>" alt="<%= post.description %>">
+                </div>  
             </div>
-            
-            
-            <div clas="div-img">
-                <img class="img-index" src="<%= post.img %>" alt="<%= post.description %>">
-           </div>  
         <% } %> 
     </div>
     

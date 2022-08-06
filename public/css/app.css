@@ -176,6 +176,32 @@ footer{
 }
 
 /* Index page styles -----------------------------------*/
+.div-outer{
+    display: grid;
+    gap: 0.5em;
+    grid-auto-flow: row;
+
+    text-align: center;
+}
+
+@media(min-width: 1000px) {
+    .div-outer{ 
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+.div-inner{
+    padding: 1em;
+    margin: 0.25em;
+}
+
+.img-index{
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 700px;
+    height: 700px;
+    margin: 0.5em 0 0 0;
+}
 
 /* Inspect page  styles -----------------------------*/
 #div-inspect-outer{
